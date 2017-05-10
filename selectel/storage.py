@@ -207,7 +207,7 @@ class Storage(object):
                 "rx": int(r.headers.get("X-Received-Bytes", 0))
             }
         else:
-            dt = datetime.strptime(r.headers["Last-Modified"],
+            dt = datetime.strptime(r.headers["Date"],
                                    "%a, %d %b %Y %H:%M:%S %Z")
             result = {
                 "content-length": int(r.headers["Content-Length"]),
